@@ -1,3 +1,4 @@
+import { Link } from 'expo-router';
 import { Pressable, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -13,6 +14,14 @@ export default function Profile() {
           <Text className="text-sm text-slate-500">Signed in as</Text>
           <Text className="text-xl font-semibold text-slate-900">{session}</Text>
         </View>
+
+        <Link href="/storage-playground" asChild>
+          <Pressable className="rounded-xl border border-slate-200 bg-slate-50 py-3 active:opacity-80">
+            <Text className="text-center text-base font-semibold text-slate-700">
+              Storage playground
+            </Text>
+          </Pressable>
+        </Link>
 
         <Pressable
           onPress={signOut}

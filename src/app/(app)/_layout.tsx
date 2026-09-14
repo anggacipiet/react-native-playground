@@ -39,6 +39,14 @@ export default function AppTabsLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="storage-playground"
+        options={{
+          title: 'Storage playground',
+          // Reachable via the Link on Profile, not a bottom tab item.
+          href: null,
+        }}
+      />
     </Tabs>
   );
 }
